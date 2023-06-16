@@ -88,43 +88,8 @@ a {
 .menu__icon:hover {
   border: 2px solid #b8ffec;
 }
-@media (max-width: 768px) {
-  .icon--menu {
-    border-right: 2px solid transparent;
-    padding-right: 0px;
-  }
-}
-@media (min-width: 768px) {
-  .description__text {
-    flex: 0 1 50%;
-  }
-  .description__arrow {
-  }
-  .description__img {
-    flex: 0 1 50%;
-  }
-}
-@media (min-width: 1120px) {
-  .icon--repair {
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    padding: 0;
-    border-left: 2px solid transparent;
-  }
-  .icon--check {
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-  }
-  .icon--repair::before {
-    content: "Оставить заявку";
-    padding: 0 10px;
-  }
-  .icon--check::before {
-    content: "Статус ремонта";
-    padding: 0 10px;
-  }
+.description__title{
+  display: none;
 }
 .header__title {
   position: relative;
@@ -159,27 +124,92 @@ a {
 }
 .description {
   margin: 0 15px;
-  display: flex;
-  flex-wrap: wrap;
+
+}
+.description__wrap{
+   display: flex;
+  flex-wrap: wrap; 
 }
 #cut[type="checkbox"] .text--cut{
   width: 20px;
   height: 20px;
 }
+.description__title{
+  font-family: "TTLakes-Medium";
+  color: #7e7e82;
+  margin: 20px;
+}
+.text--next::before{
+  content: url(/access/imgs/expand.svg);
+  margin-top: -5px;
 
+}
 .text--сut {
+  font-family: 'TTLakes-Regular';
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 7;
   overflow: hidden;
+  font-size: 14px;
+line-height: 20px;
+letter-spacing: 0.2px;
+color: #1B1C21;
+}
+.text--next{
+  font-family: 'TTLakes-Medium';
+  color: #1B1C21;
+  line-height: 24px;
 }
 .description__arrow {
   color: black;
 }
 .description__img {
-  /* flex: 0 1 50%; */
+  padding-left: 10px;
 }
 .description__img img {
   width: 100%;
   display: block;
 }
+@media (max-width: 768px) {
+  .icon--menu {
+    border-right: 2px solid transparent;
+    padding-right: 0px;
+  }
+
+}
+@media (min-width: 768px) {
+  .description__text {
+    flex: 0 1 50%;
+  }
+  .description__arrow {
+  }
+  .description__img {
+    flex: 0 1 50%;
+  }
+}
+@media (min-width: 1120px) {
+  .description__title{
+    display: block;
+  }
+  .icon--repair {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border-left: 2px solid transparent;
+  }
+  .icon--check {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+  }
+  .icon--repair::before {
+    content: "Оставить заявку";
+    padding: 0 10px;
+  }
+  .icon--check::before {
+    content: "Статус ремонта";
+    padding: 0 10px;
+  }
+}
+
